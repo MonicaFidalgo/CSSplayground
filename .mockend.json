@@ -1,5 +1,8 @@
 {
   "Batata": {
-    "title": { "string": {} }
+    "title": { "string": {} },
+    "name": { "string": {} },
+    "id": { "number": {} }
+
   }
 }
