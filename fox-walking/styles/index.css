@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Press Start 2P", cursive;
+  background-color: aquamarine;
+  text-align: center;
+}
+
+.content {
+  margin: 100px auto;
+}
+
+button {
+  position: relative;
+  font-family: "Press Start 2P", cursive;
+  display: inline-flex;
+  padding: 10px 20px;
+  background-color: pink;
+  border: 1px solid hotpink;
+  border-radius: 30px;
+  outline: inherit;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hotpink;
+}
+
+button:hover .fa {
+  color: white;
+}
+
+.fa {
+  padding-left: 5px;
+  color: hotpink;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#fox {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 48px;
+  height: 48px;
+
+  transform: scale(2);
+  -ms-transform: scale(2);
+  -webkit-transform: scale(2);
+
+  background-image: url("../assets/fox2.webp");
+  background-repeat: no-repeat;
+}
+
+.goDown {
+  animation: goDown 1s steps(4) infinite;
+  -webkit-animation: goDown 1s steps(4) infinite;
+  -moz-animation: goDown 1s steps(4) infinite;
+  -ms-animation: goDown 1s steps(4) infinite;
+  -o-animation: goDown 1s steps(4) infinite;
+}
+
+.goUp {
+  animation: goUp 1s steps(4) infinite;
+  -webkit-animation: goUp 1s steps(4) infinite;
+  -moz-animation: goUp 1s steps(4) infinite;
+  -ms-animation: goUp 1s steps(4) infinite;
+  -o-animation: goUp 1s steps(4) infinite;
+}
+
+.goLeft {
+  animation: goLeft 1s steps(4) infinite;
+  -webkit-animation: goLeft 1s steps(4) infinite;
+  -moz-animation: goLeft 1s steps(4) infinite;
+  -ms-animation: goLeft 1s steps(4) infinite;
+  -o-animation: goLeft 1s steps(4) infinite;
+}
+
+.goRight {
+  animation: goRight 1s steps(4) infinite;
+  -webkit-animation: goRight 1s steps(4) infinite;
+  -moz-animation: goRight 1s steps(4) infinite;
+  -ms-animation: goRight 1s steps(4) infinite;
+  -o-animation: goRight 1s steps(4) infinite;
+}
+
+@keyframes goDown {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -186px 0px;
+  }
+}
+
+@keyframes goLeft {
+  from {
+    background-position: 0px -45px;
+  }
+  to {
+    background-position: -186px -45px;
+  }
+}
+
+@keyframes goRight {
+  from {
+    background-position: 0px -88px;
+  }
+  to {
+    background-position: -186px -88px;
+  }
+}
+
+@keyframes goUp {
+  from {
+    background-position: 0px -128px;
+  }
+  to {
+    background-position: -186px -128px;
+  }
+}

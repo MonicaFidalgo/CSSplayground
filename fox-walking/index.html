@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Sprite walking fox</title>
+  </head>
+
+  <body>
+    <div class="content">
+      <h1>Sprite Walking Fox</h1>
+      <div class="row">
+        <button id="up">up<i class="fa fa-arrow-up"></i></button>
+        <button id="down">down<i class="fa fa-arrow-down"></i></button>
+        <button id="left">left<i class="fa fa-arrow-left"></i></button>
+        <button id="right">right<i class="fa fa-arrow-right"></i></button>
+      </div>
+      <div id="fox"></div>
+    </div>
+
+    <script>
+      (function () {
+        var touched = false;
+        var fox = document.getElementById("fox");
+
+        var up = document.getElementById("up");
+        var down = document.getElementById("down");
+        var left = document.getElementById("left");
+        var right = document.getElementById("right");
+
+        up.addEventListener("click", function () {
+          fox.className = "";
+          fox.classList.toggle("goUp");
+        });
+        down.addEventListener("click", function () {
+          fox.className = "";
+          fox.classList.toggle("goDown");
+        });
+        left.addEventListener("click", function () {
+          fox.className = "";
+          fox.classList.toggle("goLeft");
+        });
+        right.addEventListener("click", function () {
+          fox.className = "";
+          fox.classList.toggle("goRight");
+        });
+        fox.addEventListener("touchend", function () {
+          fox.classList.toggle("touched");
+          touched = !touched;
+          if (fox.classList || touched) {
+            fox.className = "";
+          } else {
+            fox.className = "touched";
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
