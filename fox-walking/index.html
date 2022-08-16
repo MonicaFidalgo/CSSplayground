@@ -51,15 +51,6 @@
           fox.className = "";
           fox.classList.toggle("goRight");
         });
-        fox.addEventListener("touchend", function () {
-          fox.classList.toggle("touched");
-          touched = !touched;
-          if (fox.classList || touched) {
-            fox.className = "";
-          } else {
-            fox.className = "touched";
-          }
-        });
       })();
     </script>
   </body>
