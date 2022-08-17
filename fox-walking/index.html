@@ -25,33 +25,6 @@
       <div id="fox"></div>
     </div>
 
-    <script>
-      (function () {
-        var touched = false;
-        var fox = document.getElementById("fox");
-
-        var up = document.getElementById("up");
-        var down = document.getElementById("down");
-        var left = document.getElementById("left");
-        var right = document.getElementById("right");
-
-        up.addEventListener("click", function () {
-          fox.className = "";
-          fox.classList.toggle("goUp");
-        });
-        down.addEventListener("click", function () {
-          fox.className = "";
-          fox.classList.toggle("goDown");
-        });
-        left.addEventListener("click", function () {
-          fox.className = "";
-          fox.classList.toggle("goLeft");
-        });
-        right.addEventListener("click", function () {
-          fox.className = "";
-          fox.classList.toggle("goRight");
-        });
-      })();
-    </script>
+    <script src="scripts/index.js" type="text/javascript"></script>
   </body>
 </html>
